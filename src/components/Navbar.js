@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom'
 import './styles/Navbar.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
   return (
     <nav className='absolute h-16 w-100 bg-transparent uppercase tracking-wider text-gray-700'>
+      {/* <FontAwesomeIcon icon={faBars} /> */}
       <ul className='flex justify-end self-center space-x-5 mr-4'>
         <li>
           {/* home is hero component */}
-          <Link to='/home'>Home</Link>
+          <Link to='/'>Home</Link>
         </li>
         <li>
           <Link to='/about'>About</Link>
