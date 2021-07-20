@@ -1,9 +1,14 @@
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './styles/Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {}, [])
+
   return (
     <nav className='absolute h-16 w-100 bg-transparent uppercase tracking-wider text-gray-700'>
       {/* <FontAwesomeIcon icon={faBars} /> */}
