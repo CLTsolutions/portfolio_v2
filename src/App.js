@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Resume from './components/Resume'
 import Skills from './components/Skills'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -16,6 +17,12 @@ function App() {
       </header> */}
       {/* <Hero /> */}
       <Navbar />
+      {/* <Hero /> */}
+      {/* <About /> */}
+      {/* <Resume /> */}
+      {/* <Skills /> */}
+      {/* <Projects /> */}
+      {/* <Contact /> */}
       <Switch>
         <Route exact path='/' component={Hero} />
         <Route exact path='/about' component={About} />
@@ -24,6 +31,7 @@ function App() {
         <Route path='/projects' component={Projects} />
         <Route path='/contact' component={Contact} />
       </Switch>
+      <Footer />
     </div>
   )
 }
