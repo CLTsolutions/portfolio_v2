@@ -10,9 +10,9 @@ const Navbar = () => {
   useEffect(() => {}, [])
 
   return (
-    <nav className='absolute h-16 w-100 bg-transparent uppercase tracking-wider text-gray-700'>
+    <nav className='absolute h-16 w-100 bg-transparent'>
       {/* <FontAwesomeIcon icon={faBars} /> */}
-      <ul className='flex justify-end self-center space-x-5 mr-4'>
+      <ul className='flex justify-end self-center space-x-5 mr-4 uppercase tracking-wider text-gray-700 text-2xl'>
         <li>
           {/* home is hero component */}
           <Link to='/'>Home</Link>
