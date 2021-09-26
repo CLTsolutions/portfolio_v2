@@ -7,9 +7,18 @@ const Navbar = () => {
 
    useEffect(() => {}, [])
 
+   const open = () => {
+      setIsOpen(true)
+   }
+
+   const close = () => {
+      setIsOpen(false)
+   }
+
    return (
-      <nav className='absolute h-16 w-100 bg-transparent'>
-         <ul className='flex justify-end self-center space-x-5 mr-4 uppercase tracking-wider text-gray-700 text-2xl'>
+      <nav className='absolute h-full w-1/4 bg-white bg-opacity-75'>
+         {/* <ul className='flex justify-end self-center space-x-5 mr-4 uppercase tracking-wider text-gray-700 text-2xl'> */}
+         <ul className='flex flex-col items-center space-y-5 uppercase tracking-wider text-gray-700 text-2xl'>
             <li>
                {/* home is hero component */}
                <Link to='/'>Home</Link>

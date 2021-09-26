@@ -1,13 +1,13 @@
 .App {
-  text-align: center;
+   text-align: center;
 }
 
 h1 {
-  font-size: 1.5rem;
+   font-size: 1.5rem;
 }
 
 div {
-  height: 100vh;
+   min-height: calc(100vh - 52px);
 }
 
 /* .App-logo {
