@@ -8,16 +8,18 @@ const Footer = () => {
    return (
       <>
          {location.pathname === '/home' ? null : (
-            <footer>
-               <ul className='flex justify-center'>
+            <footer className='h-40 flex flex-col justify-center'>
+               <ul className='flex justify-center mb-6'>
                   <li>
-                     <FaGithubSquare size={32} />
+                     <FaGithubSquare size={40} />
                   </li>
                   <li>
-                     <FaLinkedin size={32} />
+                     <FaLinkedin size={40} />
                   </li>
                </ul>
-               <p className='text-2xl'>&copy; Chelsey Tschida {date}</p>
+               <p className='text-2xl text-gray-600 uppercase tracking-wider'>
+                  &copy; Chelsey Tschida {date}
+               </p>
             </footer>
          )}
       </>

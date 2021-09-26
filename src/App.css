@@ -7,7 +7,11 @@ h1 {
 }
 
 div {
-   min-height: calc(100vh - 52px);
+   min-height: calc(100vh - 100px);
+}
+
+footer {
+   background-color: #e7d9dd;
 }
 
 /* .App-logo {
