@@ -1,18 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router'
-// import '../styles/Navbar.css'
 
-const Navbar = () => {
+const SideNav = () => {
    const [isOpen, setIsOpen] = useState(false)
    const location = useLocation()
 
+   useEffect(() => {}, [])
+
+   const open = () => {
+      setIsOpen(true)
+   }
+
+   const close = () => {
+      setIsOpen(false)
+   }
+
    return (
       <>
-         {location.pathname !== '/home' && (
-            <nav className='absolute w-full h-24 bg-white bg-opacity-75 border-b-2'>
-               <ul className='h-24 flex justify-end items-center space-x-5 pr-4 uppercase tracking-wider text-gray-700 text-2xl'>
-                  {/* <ul className='flex flex-col items-center space-y-5 uppercase tracking-wider text-gray-700 text-2xl'> */}
+         {location.pathname === '/home' && (
+            <nav className='absolute h-full w-1/4 bg-white bg-opacity-75'>
+               <ul className='flex flex-col items-center space-y-5 uppercase tracking-wider text-gray-700 text-2xl'>
                   <li>
                      {/* home is hero component */}
                      <Link to='/'>Home</Link>
@@ -39,4 +47,4 @@ const Navbar = () => {
    )
 }
 
-export default Navbar
+export default SideNav

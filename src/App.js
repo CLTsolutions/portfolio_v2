@@ -9,19 +9,14 @@ import {
    Resume,
    Skills,
 } from './components/pages'
-import { Navbar, Footer } from './components/common'
+import { Navbar, Footer, SideNav } from './components/common'
 
 function App() {
    return (
       <div className='App'>
          {/* <Hero /> */}
          <Navbar />
-         {/* <Hero /> */}
-         {/* <About /> */}
-         {/* <Resume /> */}
-         {/* <Skills /> */}
-         {/* <Projects /> */}
-         {/* <Contact /> */}
+         <SideNav />
          <Switch>
             <Route exact path='/'>
                <Redirect to='/home' />

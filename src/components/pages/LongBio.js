@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { chelseyParis } from '../../assets'
 
 const LongBio = () => {
@@ -37,13 +38,17 @@ const LongBio = () => {
                className='text-pink-700'
             >
                {' '}
-               LinkedIn.
+               LinkedIn
             </a>
+            , and check out my{' '}
+            <Link to='/skills' className='text-pink-700'>
+               skills!
+            </Link>
          </p>
          <img
             className='w-1/4 h-1/4 rounded'
             src={chelseyParis}
-            alt='About Me (Chelsey in a Plane'
+            alt='About Me Chelsey in Paris'
          />
       </article>
    )
