@@ -10,7 +10,7 @@ const Navbar = () => {
    return (
       <>
          {location.pathname !== '/home' && (
-            <nav className='absolute w-full h-24 bg-white bg-opacity-75 border-b-2'>
+            <nav className='w-full h-24 bg-white bg-opacity-75 border-b-2'>
                <ul className='h-24 flex justify-end items-center space-x-5 pr-4 uppercase tracking-wider text-gray-700 text-2xl'>
                   {/* <ul className='flex flex-col items-center space-y-5 uppercase tracking-wider text-gray-700 text-2xl'> */}
                   <li>
