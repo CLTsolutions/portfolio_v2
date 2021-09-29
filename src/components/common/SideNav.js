@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router'
+import { AiOutlineBars, AiOutlineClose } from 'react-icons/ai'
 
 const SideNav = () => {
    const [isOpen, setIsOpen] = useState(false)
@@ -20,6 +21,8 @@ const SideNav = () => {
       <>
          {location.pathname === '/home' && (
             <nav className='absolute h-full w-1/4 bg-white bg-opacity-75'>
+               <AiOutlineClose size={30} style={{ opacity: '50%' }} />
+               <AiOutlineBars size={30} style={{ opacity: '50%' }} />
                <ul className='flex flex-col items-center space-y-5 uppercase tracking-wider text-gray-700 text-2xl'>
                   <li>
                      {/* home is hero component */}

@@ -25,7 +25,7 @@ const Footer = () => {
                   </li>
                </ul>
                <Link to='/resume'>
-                  <p className='text-2xl text-gray-600 uppercase tracking-wider hover:underline'>
+                  <p className='text-center text-2xl text-gray-600 uppercase tracking-wider hover:underline'>
                      &copy; Chelsey Tschida {date}
                   </p>
                </Link>

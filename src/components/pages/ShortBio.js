@@ -2,13 +2,13 @@ import { chelseyPlane } from '../../assets'
 
 const ShortBio = () => {
    return (
-      <article className='flex justify-center items-center'>
+      <article className='md:flex md:justify-center md:items-center my-4'>
          <img
-            className='w-1/4 h-1/4 rounded'
+            className='md:w-1/4 md:h-1/4 rounded-3xl p-5'
             src={chelseyPlane}
             alt='About Me Chelsey in a Plane'
          />
-         <p className='w-1/2 px-20 text-3xl'>
+         <p className='md:w-1/2 md:px-20 text-3xl p-5 text-justify leading-relaxed'>
             Hi, I'm Chelsey! I'm a flight attendant turned web developer.
             <br />
             <br />
