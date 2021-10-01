@@ -5,7 +5,7 @@ const About = () => {
    const [shortBio, setShortBio] = useState(true)
 
    return (
-      <main className='flex flex-col justify-center items-center'>
+      <section className='flex flex-col justify-center items-center'>
          <ul className='space-x-5'>
             <button
                className='bg-transparent hover:bg-pink-300 text-pink-500 font-semibold hover:text-white py-2 px-4 border border-pink-300 hover:border-transparent rounded'
@@ -21,7 +21,7 @@ const About = () => {
             </button>
          </ul>
          {shortBio ? <ShortBio /> : <LongBio />}
-      </main>
+      </section>
    )
 }
 

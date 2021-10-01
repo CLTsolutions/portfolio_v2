@@ -13,7 +13,7 @@ import { Navbar, Footer, SideNav } from './components/common'
 
 function App() {
    return (
-      <div className='App'>
+      <main className='App'>
          {/* <Hero /> */}
          <Navbar />
          {/* <SideNav /> */}
@@ -31,7 +31,7 @@ function App() {
             <Route component={Error} />
          </Switch>
          <Footer />
-      </div>
+      </main>
    )
 }
 

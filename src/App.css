@@ -1,13 +1,14 @@
-.App {
-   /* text-align: center; */
-}
+/* .App {
+   text-align: center;
+} */
 
-h1 {
+/* h1 {
    font-size: 1.5rem;
-}
+} */
 
 div,
-main {
+main,
+section {
    min-height: calc(100vh - 160px);
 }
 
