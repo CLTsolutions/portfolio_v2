@@ -12,9 +12,9 @@ section {
    min-height: calc(100vh - 160px);
 }
 
-footer {
+/* footer {
    background-color: #e7d9dd;
-}
+} */
 
 /* .App-logo {
   height: 40vmin;

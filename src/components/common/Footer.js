@@ -9,7 +9,7 @@ const Footer = () => {
    return (
       <>
          {location.pathname !== '/home' && (
-            <footer className='h-40 flex flex-col justify-center'>
+            <footer className='h-40 flex flex-col justify-center bg-blush'>
                <ul className='flex justify-center mb-6'>
                   <li className='hover:text-white'>
                      <FaGithubSquare

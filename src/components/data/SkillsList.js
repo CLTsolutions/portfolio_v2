@@ -1,4 +1,4 @@
-export const SkillsList = [
+const SkillsList = [
    'html',
    'css',
    'javascript',
@@ -12,3 +12,5 @@ export const SkillsList = [
    'sass',
    'github',
 ]
+
+export default SkillsList
