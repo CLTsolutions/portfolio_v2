@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router'
 import { AiOutlineBars, AiOutlineClose } from 'react-icons/ai'
 
 const SideNav = () => {
-   const [isOpen, setIsOpen] = useState(false)
+   // const [isOpen, setIsOpen] = useState(false)
    const location = useLocation()
 
    useEffect(() => {}, [])
 
-   const open = () => {
-      setIsOpen(true)
-   }
+   // const open = () => {
+   //    setIsOpen(true)
+   // }
 
-   const close = () => {
-      setIsOpen(false)
-   }
+   // const close = () => {
+   //    setIsOpen(false)
+   // }
 
    return (
       <>

@@ -9,6 +9,7 @@ module.exports = {
          current: 'currentColor',
          white: colors.white,
          gray: colors.trueGray,
+         red: colors.red,
          lavender: {
             light: '#dee2ff',
             DEFAULT: '#CBC0D3',
@@ -36,9 +37,10 @@ module.exports = {
    variants: {
       extend: {
          animation: ['motion-safe', 'motion-reduce'],
+         borderStyle: ['hover'],
+         flexGrow: ['hover', 'focus'],
          margin: ['last'],
          textColor: ['odd'],
-         flexGrow: ['hover', 'focus'],
       },
    },
    plugins: [],
