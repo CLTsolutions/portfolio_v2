@@ -2,4 +2,6 @@
 
 _In Progress_
 
-This was created with [React](https://github.com/facebook/create-react-app).
+#### Tech Stack: ####
+* React
+* Tailwind
