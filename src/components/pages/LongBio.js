@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
-import { chelseyParis } from '../../assets'
+import { ChelseyParis } from '../../assets'
 
 const LongBio = () => {
    return (
       <article className='md:flex md:justify-center md:items-center my-4'>
          <img
             className='md:w-1/4 md:h-1/4 rounded-3xl p-5 md:hidden'
-            src={chelseyParis}
+            src={ChelseyParis}
             alt='About Me Chelsey in Paris'
          />
          <p className='md:w-1/2 md:px-20 text-3xl p-5 text-justify leading-relaxed'>
@@ -52,7 +52,7 @@ const LongBio = () => {
          </p>
          <img
             className='md:w-1/4 md:h-1/4 rounded-3xl p-5 hidden md:block'
-            src={chelseyParis}
+            src={ChelseyParis}
             alt='About Me Chelsey in Paris'
          />
       </article>

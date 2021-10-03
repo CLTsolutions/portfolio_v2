@@ -11,24 +11,40 @@ const Footer = () => {
          {location.pathname !== '/home' && (
             <footer className='h-40 flex flex-col justify-center bg-blush'>
                <ul className='flex justify-center mb-6'>
-                  <li className='hover:text-white'>
-                     <FaGithubSquare
-                        style={{ opacity: '65%', cursor: 'pointer' }}
-                        size={40}
-                     />
-                  </li>
-                  <li className='hover:text-white'>
-                     <FaLinkedin
-                        style={{ opacity: '65%', cursor: 'pointer' }}
-                        size={40}
-                     />
-                  </li>
+                  <a
+                     href='https://www.linkedin.com/in/cltschida/'
+                     target='blank'
+                     className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+                  >
+                     <li className='hover:text-white'>
+                        <FaGithubSquare
+                           style={{ opacity: '65%', cursor: 'pointer' }}
+                           size={40}
+                        />
+                     </li>
+                  </a>
+                  <a
+                     href='https://github.com/CLTsolutions'
+                     target='blank'
+                     className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+                  >
+                     <li className='hover:text-white'>
+                        <FaLinkedin
+                           style={{ opacity: '65%', cursor: 'pointer' }}
+                           size={40}
+                        />
+                     </li>
+                  </a>
                </ul>
-               <Link to='/resume'>
-                  <p className='text-center text-2xl text-gray-600 uppercase tracking-wider hover:underline'>
+
+               <p className='text-center text-2xl text-gray-600 uppercase tracking-wider hover:underline'>
+                  <Link
+                     to='/resume'
+                     className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+                  >
                      &copy; Chelsey Tschida {date}
-                  </p>
-               </Link>
+                  </Link>
+               </p>
             </footer>
          )}
       </>

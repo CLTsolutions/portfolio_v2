@@ -7,7 +7,7 @@ const Skills = () => {
    const skillsMapper = () => {
       return SkillsList?.map((skill, id) => (
          <li
-            className='uppercase text-xl text-center tracking-wider leading-relaxed text-gray-600 md:hidden odd:text-red-500 last:mb-24'
+            className='uppercase text-xl text-center tracking-wider leading-relaxed text-gray-600 md:hidden'
             key={id}
          >
             {skill}
@@ -20,9 +20,11 @@ const Skills = () => {
    })
 
    return (
-      <section className=''>
-         <h1 className='text-6xl text-center mb-4'>Skills</h1>
-         <ul className='flex flex-col justify-center space-y-5'>
+      <section className='flex flex-col'>
+         <h1 className='font-give-you-glory text-6xl text-center my-5 text-blue'>
+            Skills
+         </h1>
+         <ul className='flex flex-col justify-center space-y-5 last:mb-5'>
             {skillsMapper()}
          </ul>
       </section>

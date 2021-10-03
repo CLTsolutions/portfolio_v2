@@ -10,6 +10,7 @@ module.exports = {
          white: colors.white,
          gray: colors.trueGray,
          red: colors.red,
+         rose: colors.rose,
          lavender: {
             light: '#dee2ff',
             DEFAULT: '#CBC0D3',
@@ -18,9 +19,20 @@ module.exports = {
          blush: {
             light: '#FEEAFA',
             DEFAULT: '#EFD3D7',
+            dark: '#E9C3C9',
+         },
+         blue: {
+            light: '#8DB2B9',
+            DEFAULT: '#6798A2',
+            dark: '#55818a',
          },
       },
-      extend: {},
+      extend: {
+         fontFamily: {
+            ephesis: ['Ephesis', 'cursive'],
+            'give-you-glory': ['"Give You Glory"', 'cursive'],
+         },
+      },
       screens: {
          // => @media (min-width: 640px) { ... }
          sm: '640px',

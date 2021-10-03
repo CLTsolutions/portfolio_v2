@@ -12,13 +12,19 @@ const Navbar = () => {
 
    const toggle = () => setIsOpen(!isOpen)
 
+   const linkToggle = () => setIsOpen(false)
+
    const navbarMapper = () => {
       return Object.keys(NavbarLinks).map((link, id) => (
          <li
             key={id}
             className='block hover:bg-lavender-dark hover:text-white px-2 py-2 rounded-md uppercase tracking-wider text-gray-700 text-2xl'
          >
-            <Link to={NavbarLinks[link]} onClick={toggle}>
+            <Link
+               to={NavbarLinks[link]}
+               onClick={linkToggle}
+               className=' focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+            >
                {link}
             </Link>
          </li>
@@ -39,12 +45,21 @@ const Navbar = () => {
             <nav className='md:flex md:items-center md:justify-between w-full bg-opacity-75 border-b-2'>
                <ul className='flex items-center justify-between px-5 py-3'>
                   <>
-                     <img src={Logo} alt='Logo' className='h-20' />
+                     <Link
+                        to='/home'
+                        className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+                     >
+                        <img
+                           src={Logo}
+                           alt='Logo'
+                           className='h-20 md:pl-4 transform hover:transition duration-500 hover:scale-125'
+                        />
+                     </Link>
                   </>
                   <>
                      <button
                         type='button'
-                        className='md:hidden block text-gray-700 hover:text-grey-300 focus:text-gray-300 focus:outline-none'
+                        className='md:hidden block text-grey-600 hover:text-grey-300 focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
                         onClick={toggle}
                      >
                         {!isOpen ? (
