@@ -4,12 +4,12 @@ const SkillsList = [
    'javascript',
    'typescript',
    'react',
+   'tailwind css',
+   'bootstrap',
+   'sass',
    'node.js',
    'postgresql',
    'git',
-   'bootstrap',
-   'tailwind css',
-   'sass',
    'github',
 ]
 

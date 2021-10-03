@@ -23,7 +23,7 @@ const LongBio = () => {
             <a
                href='https://elevenfifty.org/'
                target='blank'
-               className='text-pink-700'
+               className='text-blue focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
             >
                Eleven Fifty's
             </a>{' '}
@@ -40,13 +40,16 @@ const LongBio = () => {
             <a
                href='https://www.linkedin.com/in/cltschida'
                target='blank'
-               className='text-pink-700'
+               className='text-blue focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
             >
                {' '}
                LinkedIn
             </a>
             , and check out my{' '}
-            <Link to='/skills' className='text-pink-700'>
+            <Link
+               to='/skills'
+               className='text-blue focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+            >
                skills!
             </Link>
          </p>
