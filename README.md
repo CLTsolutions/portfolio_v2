@@ -5,3 +5,4 @@ _In Progress_
 #### Tech Stack: ####
 * React
 * Tailwind
+* CSS
