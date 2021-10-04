@@ -18,7 +18,7 @@ const Navbar = () => {
       return Object.keys(NavbarLinks).map((link, id) => (
          <li
             key={id}
-            className='block hover:bg-lavender-dark hover:text-white px-2 py-2 rounded-md uppercase tracking-wider text-gray-700 text-2xl'
+            className='block hover:bg-lavender-dark hover:text-white transition ease-out duration-150 px-2 py-2 rounded-md uppercase tracking-wider text-gray-700 text-2xl'
          >
             <Link
                to={NavbarLinks[link]}
@@ -33,7 +33,7 @@ const Navbar = () => {
 
    const menuOpen = () => {
       return (
-         <ul className='px-4 pt-2 pb-4 bg-blush rounded-lg'>
+         <ul className='px-4 pt-2 pb-4 bg-blush rounded-lg transition-all duration-500 ease-in-out'>
             {navbarMapper()}
          </ul>
       )
@@ -42,7 +42,7 @@ const Navbar = () => {
    return (
       <header>
          {location.pathname !== '/home' && (
-            <nav className='md:flex md:items-center md:justify-between w-full bg-opacity-75 border-b-2'>
+            <nav className='md:flex md:items-center md:justify-between w-full bg-opacity-75 border-b-2 transition-all ease-out duration-500'>
                <ul className='flex items-center justify-between px-5 py-3'>
                   <>
                      <Link

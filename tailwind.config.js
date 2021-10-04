@@ -31,6 +31,28 @@ module.exports = {
          fontFamily: {
             ephesis: ['Ephesis', 'cursive'],
             'give-you-glory': ['"Give You Glory"', 'cursive'],
+            'shadows-into-light': ['"Shadows Into Light"', 'cursive'],
+            raleway: ['Raleway', 'sans-serif'],
+         },
+         keyframes: {
+            'fade-in': {
+               '0%': { opacity: '0' },
+               '50%': { opacity: '0.5' },
+               '100%': { opacity: '1' },
+            },
+            'fade-up': {
+               '0%': { transform: 'translateY(4rem)', opacity: '0' },
+               '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            wiggle: {
+               '0%, 100%': { transform: 'rotate(-3deg)' },
+               '50%': { transform: 'rotate(3deg)' },
+            },
+         },
+         animation: {
+            'fade-in': 'fade-in 1s ease-in',
+            'fade-up': 'fade-up .5s ease-in',
+            wiggle: 'wiggle 1s ease-in-out infinite',
          },
       },
       screens: {
