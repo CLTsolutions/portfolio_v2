@@ -16,7 +16,7 @@ const Footer = () => {
                      target='blank'
                      className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
                   >
-                     <li className='hover:text-white'>
+                     <li className='hover:text-white transition ease-out duration-150'>
                         <FaGithubSquare
                            style={{ opacity: '65%', cursor: 'pointer' }}
                            size={40}
@@ -28,7 +28,7 @@ const Footer = () => {
                      target='blank'
                      className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
                   >
-                     <li className='hover:text-white'>
+                     <li className='hover:text-white transition ease-out duration-150'>
                         <FaLinkedin
                            style={{ opacity: '65%', cursor: 'pointer' }}
                            size={40}
@@ -37,7 +37,7 @@ const Footer = () => {
                   </a>
                </ul>
 
-               <p className='text-center text-2xl text-gray-600 uppercase tracking-wider hover:underline'>
+               <p className='text-center text-2xl text-gray-600 uppercase tracking-wider hover:underline transition ease-out duration-150'>
                   <Link
                      to='/resume'
                      className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'

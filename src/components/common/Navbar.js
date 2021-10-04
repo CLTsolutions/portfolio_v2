@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useLocation } from 'react-router'
-import { NavbarLinks } from '../data'
+import { NavbarLinks, Colors } from '../data'
 import { Logo } from '../../assets/'
 import { AiOutlineBars, AiOutlineClose } from 'react-icons/ai'
 // import '../styles/Navbar.css'
@@ -20,13 +20,19 @@ const Navbar = () => {
             key={id}
             className='block hover:bg-lavender-dark hover:text-white transition ease-out duration-150 px-2 py-2 rounded-md uppercase tracking-wider text-gray-700 text-2xl'
          >
-            <Link
+            <NavLink
+               exact
                to={NavbarLinks[link]}
                onClick={linkToggle}
                className=' focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+               // activeClassName='pb-1 border-b-2 border-blue'
+               activeStyle={{
+                  borderBottom: `2px solid ${Colors.blue}`,
+                  paddingBottom: `.3rem`,
+               }}
             >
                {link}
-            </Link>
+            </NavLink>
          </li>
       ))
    }

@@ -40,8 +40,14 @@ module.exports = {
                '50%': { opacity: '0.5' },
                '100%': { opacity: '1' },
             },
+            'fade-in-larger': {
+               '0%': { transform: 'scale(0)', opacity: '0' },
+               '50%': { transform: 'scale(2)', opacity: '0.5' },
+               '100%': { transform: 'scale(1)', opacity: '1' },
+            },
             'fade-up': {
                '0%': { transform: 'translateY(4rem)', opacity: '0' },
+               '50%': { transform: 'translateY(-1rem)' },
                '100%': { transform: 'translateY(0)', opacity: '1' },
             },
             wiggle: {
@@ -50,6 +56,7 @@ module.exports = {
             },
          },
          animation: {
+            'fade-in-larger': 'fade-in 1s ease-in',
             'fade-in': 'fade-in 1s ease-in',
             'fade-up': 'fade-up .5s ease-in',
             wiggle: 'wiggle 1s ease-in-out infinite',
