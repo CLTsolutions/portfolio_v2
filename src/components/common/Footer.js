@@ -12,7 +12,7 @@ const Footer = () => {
             <footer className='h-40 flex flex-col justify-center bg-blush'>
                <ul className='flex justify-center mb-6'>
                   <a
-                     href='https://www.linkedin.com/in/cltschida/'
+                     href='https://github.com/CLTsolutions'
                      target='blank'
                      className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
                   >
@@ -24,7 +24,7 @@ const Footer = () => {
                      </li>
                   </a>
                   <a
-                     href='https://github.com/CLTsolutions'
+                     href='https://www.linkedin.com/in/cltschida/'
                      target='blank'
                      className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
                   >
