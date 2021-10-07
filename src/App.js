@@ -15,7 +15,7 @@ function App() {
    return (
       <main className='App'>
          <Navbar />
-         <SideNav />
+         {/* <SideNav /> */}
          <Switch>
             <Route exact path='/'>
                <Redirect to='/home' />

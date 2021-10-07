@@ -10,17 +10,23 @@ const Navbar = () => {
    const [isOpen, setIsOpen] = useState(false)
    const location = useLocation()
 
+   const homeNavbar =
+      'absolute md:flex md:items-center md:justify-between w-full bg-opacity-75'
+   const navbar =
+      'md:flex md:items-center md:justify-between w-full bg-opacity-75 border-b-2'
+   const homeLink =
+      'hover:bg-white hover:bg-opacity-50 hover:text-gray-700 transition duration-150 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50 uppercase tracking-wider text-gray-700 text-2xl'
+   const navLink =
+      'hover:bg-lavender-dark hover:text-white transition duration-150 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50 uppercase tracking-wider text-gray-700 text-2xl'
+
    const navbarMapper = () => {
       return Object.keys(NavbarLinks).map((link, id) => (
-         <li
-            key={id}
-            className='block hover:bg-lavender-dark hover:text-white transition ease-out duration-150 px-2 py-2 rounded-md uppercase tracking-wider text-gray-700 text-2xl'
-         >
+         <li key={id} className='block px-2 py-2'>
             <NavLink
                exact
                to={NavbarLinks[link]}
                onClick={linkToggle}
-               className=' focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+               className={location.pathname === '/home' ? homeLink : navLink}
                // activeClassName='pb-1 border-b-2 border-blue'
                activeStyle={{
                   borderBottom: `2px solid ${Colors.blue}`,
@@ -33,55 +39,57 @@ const Navbar = () => {
       ))
    }
 
+   const button = () => {
+      return (
+         <button
+            type='button'
+            className='md:hidden block text-grey-600 hover:bg-lavender-dark hover:text-white transition ease-out duration-150 px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+            onClick={toggle}
+         >
+            {!isOpen ? (
+               <AiOutlineBars size={28} className='fill-current' />
+            ) : (
+               <AiOutlineClose size={28} className='fill-current' />
+            )}
+         </button>
+      )
+   }
+
    const linkToggle = () => setIsOpen(false)
 
    const toggle = () => setIsOpen(!isOpen)
 
    const menuOpen = () => {
       return (
-         <ul className='px-4 pt-2 pb-4 bg-blush rounded-lg transition-all duration-500 ease-in-out'>
-            {navbarMapper()}
-         </ul>
+         isOpen && (
+            <ul className='px-4 pt-2 pb-4 bg-blush rounded-lg ease-in-out'>
+               {navbarMapper()}
+            </ul>
+         )
       )
    }
 
    return (
       <header>
-         {location.pathname !== '/home' && (
-            <nav className='md:flex md:items-center md:justify-between w-full bg-opacity-75 border-b-2 transition-all ease-out duration-500'>
-               <ul className='flex items-center justify-between px-5 py-3'>
-                  <>
-                     <Link
-                        to='/home'
-                        className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
-                     >
-                        <img
-                           src={Logo}
-                           alt='Logo'
-                           className='h-20 md:pl-4 transform hover:transition duration-500 hover:scale-125'
-                        />
-                     </Link>
-                  </>
-                  <>
-                     <button
-                        type='button'
-                        className='md:hidden block text-grey-600 hover:text-grey-300 focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
-                        onClick={toggle}
-                     >
-                        {!isOpen ? (
-                           <AiOutlineBars size={28} className='fill-current' />
-                        ) : (
-                           <AiOutlineClose size={28} className='fill-current' />
-                        )}
-                     </button>
-                  </>
-               </ul>
-               {!isOpen ? <></> : menuOpen()}
-               <ul className='hidden md:flex space-x-5 pr-4'>
-                  {navbarMapper()}
-               </ul>
-            </nav>
-         )}
+         <nav className={location.pathname === '/home' ? homeNavbar : navbar}>
+            <ul className='flex items-center justify-between px-5 py-3'>
+               <li>
+                  <Link
+                     to='/home'
+                     className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+                  >
+                     <img
+                        src={Logo}
+                        alt='Logo'
+                        className='h-20 md:pl-4 transform hover:transition duration-500 hover:scale-125'
+                     />
+                  </Link>
+               </li>
+               <li>{button()}</li>
+            </ul>
+            {menuOpen()}
+            <ul className='hidden md:flex space-x-5 pr-4'>{navbarMapper()}</ul>
+         </nav>
       </header>
    )
 }
