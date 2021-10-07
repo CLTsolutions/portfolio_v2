@@ -1,52 +1,71 @@
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
 import { useLocation } from 'react-router'
+import { Link } from 'react-router-dom'
 import { AiOutlineBars, AiOutlineClose } from 'react-icons/ai'
+import { NavbarLinks, Colors } from '../data'
 
 const SideNav = () => {
-   // const [isOpen, setIsOpen] = useState(false)
+   const [isOpen, setIsOpen] = useState(false)
    const location = useLocation()
 
-   useEffect(() => {}, [])
+   const navbarMapper = () => {
+      return Object.keys(NavbarLinks).map((link, id) => (
+         <li
+            key={id}
+            className='block hover:bg-lavender-dark hover:text-white transition ease-out duration-150 px-2 py-2 rounded-md uppercase tracking-wider text-gray-700 text-2xl'
+         >
+            <Link
+               to={NavbarLinks[link]}
+               onClick={linkToggle}
+               className=' focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+            >
+               {link}
+            </Link>
+         </li>
+      ))
+   }
 
-   // const open = () => {
-   //    setIsOpen(true)
-   // }
+   const button = () => {
+      return (
+         <button
+            type='button'
+            className='fixed z-10 text-grey-600 hover:text-grey-300 focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50 px-5 py-3'
+            onClick={toggle}
+         >
+            {!isOpen ? (
+               <AiOutlineBars size={30} className='fill-current' />
+            ) : (
+               <AiOutlineClose size={30} className='fill-current' />
+            )}
+         </button>
+      )
+   }
 
-   // const close = () => {
-   //    setIsOpen(false)
-   // }
+   const toggle = () => setIsOpen(!isOpen)
 
-   return (
-      <>
-         {location.pathname === '/home' && (
-            <nav className='absolute h-full w-1/4 bg-white bg-opacity-75'>
-               <AiOutlineClose size={30} style={{ opacity: '50%' }} />
-               <AiOutlineBars size={30} style={{ opacity: '50%' }} />
+   const linkToggle = () => setIsOpen(false)
+
+   const menuOpen = () => {
+      if (isOpen) {
+         return (
+            <nav className='absolute h-full w-1/2 md:w-1/4 bg-white bg-opacity-75 pt-16'>
                <ul className='flex flex-col items-center space-y-5 uppercase tracking-wider text-gray-700 text-2xl'>
-                  <li>
-                     {/* home is hero component */}
-                     <Link to='/'>Home</Link>
-                  </li>
-                  <li>
-                     <Link to='/about'>About</Link>
-                  </li>
-                  <li>
-                     <Link to='/skills'>Skills</Link>
-                  </li>
-                  <li>
-                     <Link to='/resume'>Resume</Link>
-                  </li>
-                  <li>
-                     <Link to='/projects'>Projects</Link>
-                  </li>
-                  <li>
-                     <Link to='/contact'>Contact</Link>
-                  </li>
+                  {navbarMapper()}
                </ul>
             </nav>
+         )
+      }
+   }
+
+   return (
+      <header>
+         {location.pathname === '/home' && (
+            <>
+               {button()}
+               {menuOpen()}
+            </>
          )}
-      </>
+      </header>
    )
 }
 

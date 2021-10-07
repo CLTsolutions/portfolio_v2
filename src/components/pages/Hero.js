@@ -1,6 +1,7 @@
 import { HelloWorldLogo } from '../../assets'
 import '../styles/Hero.css'
 import { FiChevronDown } from 'react-icons/fi'
+import { SideNav } from '../common'
 
 const Hero = () => {
    return (

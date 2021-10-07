@@ -1,18 +1,14 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
 import { useLocation } from 'react-router'
-import { NavbarLinks, Colors } from '../data'
-import { Logo } from '../../assets/'
+import { Link, NavLink } from 'react-router-dom'
 import { AiOutlineBars, AiOutlineClose } from 'react-icons/ai'
+import { Logo } from '../../assets/'
+import { NavbarLinks, Colors } from '../data'
 // import '../styles/Navbar.css'
 
 const Navbar = () => {
    const [isOpen, setIsOpen] = useState(false)
    const location = useLocation()
-
-   const toggle = () => setIsOpen(!isOpen)
-
-   const linkToggle = () => setIsOpen(false)
 
    const navbarMapper = () => {
       return Object.keys(NavbarLinks).map((link, id) => (
@@ -36,6 +32,10 @@ const Navbar = () => {
          </li>
       ))
    }
+
+   const linkToggle = () => setIsOpen(false)
+
+   const toggle = () => setIsOpen(!isOpen)
 
    const menuOpen = () => {
       return (
