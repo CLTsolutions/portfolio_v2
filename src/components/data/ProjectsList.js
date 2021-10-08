@@ -1,6 +1,6 @@
 import {
    BarCart,
-   CatsApi,
+   CatApi,
    cssCreature,
    LoremPicsum,
    KastThumb,
@@ -12,7 +12,7 @@ const projects = 'projects'
 const Works = [
    {
       id: 1,
-      image: { cssCreature },
+      image: cssCreature,
       title: 'CSS Creature',
       stack: ['HTML', 'CSS'],
       deployedUrl: 'https://codepen.io/cltsolutions/pen/zYByBma',
@@ -25,7 +25,7 @@ const Works = [
    },
    {
       id: 2,
-      image: { KastThumb },
+      image: KastThumb,
       title: 'Static Website',
       stack: ['HTML', 'CSS'],
       deployedUrl: 'https://cltsolutions.github.io/static-layout/',
@@ -38,7 +38,7 @@ const Works = [
    },
    {
       id: 3,
-      image: { LoremPicsum },
+      image: LoremPicsum,
       title: 'Lorem Picsum API Project',
       stack: ['HTML', 'CSS', 'Javascript'],
       deployedUrl: 'https://cltsolutions.github.io/efawd-api-project1/',
@@ -51,7 +51,7 @@ const Works = [
    },
    {
       id: 4,
-      image: { CatsApi },
+      image: CatApi,
       title: 'Cats API Project',
       stack: ['HTML', 'CSS', 'Javascript'],
       deployedUrl: 'https://cltsolutions.github.io/cats_api/',
@@ -64,7 +64,7 @@ const Works = [
    },
    {
       id: 5,
-      image: { BarCart },
+      image: BarCart,
       title: 'The Bar Cart',
       stack: [
          'HTML',
@@ -89,7 +89,7 @@ const Works = [
    },
    {
       id: 6,
-      image: { Takeoff },
+      image: Takeoff,
       title: 'Takeoff',
       stack: [
          'HTML',

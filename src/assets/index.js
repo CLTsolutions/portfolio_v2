@@ -1,5 +1,5 @@
 import BarCart from '../assets/barcart.png'
-import CatApi from '../assets/kitty.png'
+import CatApi from '../assets/kitty.jpg'
 import ChelseyPlane from '../assets/ctPlane.JPG'
 import ChelseyParis from '../assets/ctParis.JPG'
 import cssCreature from '../assets/cssCreature.png'
