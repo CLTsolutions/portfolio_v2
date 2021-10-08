@@ -1,6 +1,3 @@
-import React, { useEffect } from 'react'
-
-// import { SkillsList } from '../utils'
 import { SkillsList } from '../data'
 
 const Skills = () => {
@@ -14,10 +11,6 @@ const Skills = () => {
          </li>
       ))
    }
-
-   useEffect(() => {
-      console.log(SkillsList)
-   })
 
    return (
       <section className='flex flex-col'>

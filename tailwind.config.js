@@ -79,10 +79,10 @@ module.exports = {
       extend: {
          animation: ['motion-safe', 'motion-reduce'],
          backgroundColor: ['active'],
-         borderStyle: ['hover'],
+         borderStyle: ['hover', 'active'],
          flexGrow: ['hover', 'focus'],
          margin: ['last'],
-         textColor: ['odd'],
+         textColor: ['odd', 'active'],
       },
    },
    plugins: [],
