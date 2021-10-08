@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { useRouteMatch } from 'react-router'
 import { ShortBio, LongBio } from '../pages'
 
 const About = () => {
    const [shortBio, setShortBio] = useState(true)
+   const { url } = useRouteMatch()
 
    return (
       <section className='flex flex-col justify-center items-center'>

@@ -78,6 +78,7 @@ module.exports = {
    variants: {
       extend: {
          animation: ['motion-safe', 'motion-reduce'],
+         backgroundColor: ['active'],
          borderStyle: ['hover'],
          flexGrow: ['hover', 'focus'],
          margin: ['last'],

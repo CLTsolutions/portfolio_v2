@@ -9,13 +9,12 @@ import {
    Resume,
    Skills,
 } from './components/pages'
-import { Navbar, Footer, SideNav } from './components/common'
+import { Navbar, Footer } from './components/common'
 
 function App() {
    return (
       <main className='App'>
          <Navbar />
-         {/* <SideNav /> */}
          <Switch>
             <Route exact path='/'>
                <Redirect to='/home' />
@@ -27,6 +26,7 @@ function App() {
             <Route path='/resume' component={Resume} />
             <Route path='/projects' component={Projects} />
             <Route path='/contact' component={Contact} />
+            <Route path='/home/about' component={About} />
             <Route component={Error} />
          </Switch>
          <Footer />

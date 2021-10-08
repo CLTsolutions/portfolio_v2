@@ -9,29 +9,30 @@ import { NavbarLinks, Colors } from '../data'
 const Navbar = () => {
    const [isOpen, setIsOpen] = useState(false)
    const location = useLocation()
+   const path = location.pathname === '/home'
 
    const homeNavbar =
       'absolute md:flex md:items-center md:justify-between w-full bg-opacity-75'
    const navbar =
       'md:flex md:items-center md:justify-between w-full bg-opacity-75 border-b-2'
    const homeLink =
-      'hover:bg-white hover:bg-opacity-50 hover:text-gray-700 transition duration-150 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50 uppercase tracking-wider text-gray-700 text-2xl'
+      'hover:bg-blue-dark hover:bg-opacity-75 hover:text-white rounded transition duration-150 px-2 py-2 focus:outline-none focus:ring-2 focus:ring-blush-light focus:ring-opacity-50 uppercase tracking-wider text-gray-700 text-2xl'
    const navLink =
-      'hover:bg-lavender-dark hover:text-white transition duration-150 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50 uppercase tracking-wider text-gray-700 text-2xl'
+      'hover:bg-lavender-dark hover:text-white rounded transition duration-150 px-2 py-2 focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50 uppercase tracking-wider text-gray-700 text-2xl'
 
    const navbarMapper = () => {
       return Object.keys(NavbarLinks).map((link, id) => (
          <li key={id} className='block px-2 py-2'>
             <NavLink
-               exact
-               to={NavbarLinks[link]}
-               onClick={linkToggle}
-               className={location.pathname === '/home' ? homeLink : navLink}
+               className={path ? homeLink : navLink}
                // activeClassName='pb-1 border-b-2 border-blue'
                activeStyle={{
                   borderBottom: `2px solid ${Colors.blue}`,
                   paddingBottom: `.3rem`,
                }}
+               onClick={linkToggle}
+               exact
+               to={NavbarLinks[link]}
             >
                {link}
             </NavLink>
@@ -71,17 +72,17 @@ const Navbar = () => {
 
    return (
       <header>
-         <nav className={location.pathname === '/home' ? homeNavbar : navbar}>
+         <nav className={path ? homeNavbar : navbar}>
             <ul className='flex items-center justify-between px-5 py-3'>
-               <li>
+               <li className=''>
                   <Link
                      to='/home'
-                     className='focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+                     className='focus:outline-none focus:ring-2 focus:ring-blush-light focus:ring-opacity-50'
                   >
                      <img
                         src={Logo}
                         alt='Logo'
-                        className='h-20 md:pl-4 transform hover:transition duration-500 hover:scale-125'
+                        className='h-20 md:pl-4 transform hover:transition duration-500 hover:scale-125 focus:outline-none'
                      />
                   </Link>
                </li>

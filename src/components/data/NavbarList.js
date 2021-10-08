@@ -1,5 +1,5 @@
 const NavbarLinks = {
-   home: '/',
+   home: '/home',
    about: '/about',
    skills: '/skills',
    resume: '/resume',
