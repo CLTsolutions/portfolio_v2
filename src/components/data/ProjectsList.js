@@ -21,7 +21,7 @@ const Works = [
       url: `/${projects}/css-creature`,
       project: 'personal',
       efa: true,
-      //   featured: true,
+      featured: false,
    },
    {
       id: 2,
@@ -34,7 +34,7 @@ const Works = [
       url: `/${projects}/static-website`,
       project: 'personal',
       efa: true,
-      //   featured: true,
+      featured: false,
    },
    {
       id: 3,
@@ -47,7 +47,7 @@ const Works = [
       url: `/${projects}/lorem-picsum`,
       project: 'personal',
       efa: true,
-      //   featured: true,
+      featured: false,
    },
    {
       id: 4,
@@ -60,7 +60,7 @@ const Works = [
       url: `/${projects}/catsapi`,
       project: 'personal',
       efa: false,
-      //   featured: true,
+      featured: false,
    },
    {
       id: 5,
@@ -85,7 +85,7 @@ const Works = [
       url: `/${projects}/catsapi`,
       project: 'personal',
       efa: true,
-      //   featured: true,
+      featured: false,
    },
    {
       id: 6,
@@ -112,7 +112,7 @@ const Works = [
       url: `/${projects}/catsapi`,
       project: 'personal',
       efa: true,
-      //   featured: true,
+      featured: false,
    },
 ]
 

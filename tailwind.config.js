@@ -28,10 +28,6 @@ module.exports = {
          },
       },
       extend: {
-         backgroundImage: {
-            cssCreature: "url('../src/assets/cssCreature.png')",
-            KastThumb: "url('../src/assets/KastThumb.png')",
-         },
          fontFamily: {
             ephesis: ['Ephesis', 'cursive'],
             'give-you-glory': ['"Give You Glory"', 'cursive'],
