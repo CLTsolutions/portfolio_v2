@@ -1,9 +1,9 @@
 const Resume = () => {
-  return (
-    <div>
-      <h1>My Resume</h1>
-    </div>
-  )
+   return (
+      <section>
+         <h1>My Resume</h1>
+      </section>
+   )
 }
 
 export default Resume

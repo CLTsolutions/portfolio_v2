@@ -28,6 +28,10 @@ module.exports = {
          },
       },
       extend: {
+         backgroundImage: {
+            cssCreature: "url('../src/assets/cssCreature.png')",
+            KastThumb: "url('../src/assets/KastThumb.png')",
+         },
          fontFamily: {
             ephesis: ['Ephesis', 'cursive'],
             'give-you-glory': ['"Give You Glory"', 'cursive'],
@@ -60,6 +64,12 @@ module.exports = {
             'fade-in': 'fade-in 1s ease-in',
             'fade-up': 'fade-up .5s ease-in',
             wiggle: 'wiggle 1s ease-in-out infinite',
+         },
+         height: {
+            350: '350px',
+         },
+         width: {
+            350: '350px',
          },
       },
       screens: {

@@ -1,6 +1,6 @@
 import Colors from './Colors'
 import NavbarLinks from './NavbarList'
-import projects from './ProjectsList'
+import Works from './ProjectsList'
 import SkillsList from './SkillsList'
 
-export { Colors, NavbarLinks, projects, SkillsList }
+export { Colors, NavbarLinks, Works, SkillsList }

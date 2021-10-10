@@ -1,8 +1,8 @@
 const Error = () => {
    return (
-      <div>
+      <section>
          <h1>404</h1>
-      </div>
+      </section>
    )
 }
 

@@ -8,7 +8,7 @@ const Hero = () => {
    }
 
    return (
-      <div className='hero'>
+      <section className='hero'>
          <div className='hero__content'>
             <img src={HelloWorldLogo} alt='Logo' className='hero--logo' />
             <button
@@ -18,7 +18,7 @@ const Hero = () => {
                About me <FiChevronDown />
             </button>
          </div>
-      </div>
+      </section>
    )
 }
 

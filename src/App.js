@@ -13,7 +13,7 @@ import { Navbar, Footer } from './components/common'
 
 function App() {
    return (
-      <main className='App'>
+      <div className='App'>
          <Navbar />
          <Switch>
             <Route exact path='/'>
@@ -30,7 +30,7 @@ function App() {
             <Route component={Error} />
          </Switch>
          <Footer />
-      </main>
+      </div>
    )
 }
 

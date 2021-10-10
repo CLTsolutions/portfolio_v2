@@ -5,6 +5,8 @@ import { ShortBio, LongBio } from '../pages'
 const About = () => {
    const [shortBio, setShortBio] = useState(true)
    const { url } = useRouteMatch()
+   const buttonStyle =
+      'bg-transparent hover:bg-lavender-dark text-blue font-semibold hover:text-white transition ease-out duration-300 py-2 px-4 border border-blue hover:border-transparent rounded text-2xl focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
 
    return (
       <section className='flex flex-col justify-center items-center'>
@@ -12,16 +14,10 @@ const About = () => {
             about me
          </h1>
          <ul className='space-x-5 pt-16'>
-            <button
-               className='bg-transparent hover:bg-lavender-dark text-blue font-semibold hover:text-white transition ease-out duration-300 py-2 px-4 border border-blue hover:border-transparent rounded text-2xl focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
-               onClick={() => setShortBio(true)}
-            >
+            <button className={buttonStyle} onClick={() => setShortBio(true)}>
                Short Bio
             </button>
-            <button
-               className='bg-transparent hover:bg-lavender-dark text-blue font-semibold hover:text-white transition ease-out duration-300 py-2 px-4 border border-blue hover:border-transparent rounded text-2xl focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
-               onClick={() => setShortBio(false)}
-            >
+            <button className={buttonStyle} onClick={() => setShortBio(false)}>
                Long Bio
             </button>
          </ul>
