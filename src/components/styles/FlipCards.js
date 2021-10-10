@@ -30,12 +30,20 @@ const FlipCards = ({ skillMapper, buttonStyle, work }) => {
             </div>
          </FrontSide>
          <BackSide style={{ backgroundColor: '#CBC0D3', padding: '20px' }}>
-            <div className='h-full flex flex-col justify-between'>
-               <div className='flex flex-wrap justify-center pt-10 space-x-4'>
-                  <a href={work.deployedUrl} target='_blank'>
+            <div className='h-full flex flex-col justify-between space-y-3'>
+               <div className='flex justify-center sm:pt-10 space-x-4'>
+                  <a
+                     href={work.deployedUrl}
+                     target='_blank'
+                     className='focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50'
+                  >
                      <button className={buttonStyle}>Go To Project</button>
                   </a>
-                  <a href={work.github} target='_blank'>
+                  <a
+                     href={work.github}
+                     target='_blank'
+                     className='focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50'
+                  >
                      <button className={buttonStyle}>View Raw Code</button>
                   </a>
                </div>
@@ -43,7 +51,7 @@ const FlipCards = ({ skillMapper, buttonStyle, work }) => {
                   <h3 className='font-semibold font-shadows-into-light text-4xl md:text-5xl text-gray-800'>
                      Tech Stack:
                   </h3>
-                  <ul className='flex flex-wrap justify-center space-x-6'>
+                  <ul className='flex flex-wrap justify-center space-x-3'>
                      {skillMapper(work)}
                   </ul>
                </div>
