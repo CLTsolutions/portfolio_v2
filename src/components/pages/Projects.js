@@ -31,7 +31,7 @@ const Projects = () => {
          <h1 className='text-transform: capitalize font-shadows-into-light text-8xl text-center mt-8 text-blue-light md:animate-fade-in'>
             Projects
          </h1>
-         <div className='flex justify-center flex-wrap w-full md:p-10'>
+         <div className='flex flex-wrap justify-center w-full md:p-10 xl:grid xl:grid-cols-3 xl:grid-rows-2 xl:justify-items-center xl:gap-y-16'>
             {cardsMapper()}
          </div>
       </main>

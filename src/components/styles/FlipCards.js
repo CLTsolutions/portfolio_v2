@@ -55,7 +55,7 @@ const FlipCards = ({ skillMapper, buttonStyle, work }) => {
                   </ul>
                </div>
                <div>
-                  <p className='text-justify text-2xl md:text-3xl text-gray-800'>
+                  <p className='text-justify text-2xl text-gray-800'>
                      {work.description}
                   </p>
                </div>
