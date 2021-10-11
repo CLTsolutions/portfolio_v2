@@ -7,7 +7,6 @@ const FlipCards = ({ skillMapper, buttonStyle, work }) => {
          flipOnClick={true}
          flipDirection='horizontal'
          style={{ width: '40rem', height: '40rem', margin: '2rem' }}
-         key={work.id}
       >
          <FrontSide
             style={{ backgroundColor: '#CBC0D3' }}
@@ -18,19 +17,19 @@ const FlipCards = ({ skillMapper, buttonStyle, work }) => {
                   <h2 className='text-4xl font-shadows-into-light'>
                      {work.title}
                   </h2>
-                  <p className='block xl:hidden text-gray-800 text-2xl'>
+                  <p className='block xl:hidden text-gray-700 text-2xl'>
                      Tap for more...
                   </p>
                </div>
                <img
                   src={work.image}
                   alt={`Thumbnail of ${work.title}`}
-                  className='h-350 w-350 object-cover pb-4'
+                  className='h-350 w-350 object-cover pb-4 shadow-md'
                />
             </div>
          </FrontSide>
          <BackSide style={{ backgroundColor: '#CBC0D3', padding: '20px' }}>
-            <div className='h-full flex flex-col justify-between space-y-3'>
+            <div className='h-full flex flex-col justify-between space-y-3 bg-ConcreteBg bg-cream py-4 px-2 md:p-6 shadow-sm md:shadow-md'>
                <div className='flex justify-center sm:pt-10 space-x-4'>
                   <a
                      href={work.deployedUrl}
@@ -56,7 +55,7 @@ const FlipCards = ({ skillMapper, buttonStyle, work }) => {
                   </ul>
                </div>
                <div>
-                  <p className='text-justify text-3xl text-gray-800'>
+                  <p className='text-justify text-2xl md:text-3xl text-gray-800'>
                      {work.description}
                   </p>
                </div>

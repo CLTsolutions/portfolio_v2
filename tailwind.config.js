@@ -26,8 +26,14 @@ module.exports = {
             DEFAULT: '#6798A2',
             dark: '#55818a',
          },
+         cream: {
+            DEFAULT: '#fcf9fb',
+         },
       },
       extend: {
+         backgroundImage: {
+            ConcreteBg: "url('../src/assets/concrete-wall.png')",
+         },
          fontFamily: {
             ephesis: ['Ephesis', 'cursive'],
             'give-you-glory': ['"Give You Glory"', 'cursive'],

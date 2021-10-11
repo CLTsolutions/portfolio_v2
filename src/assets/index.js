@@ -9,12 +9,14 @@ import KastThumb from '../assets/KastThumb.png'
 import Logo from '../assets/chelseyBrandLogo.png'
 import LoremPicsum from '../assets/LoremPicsum.png'
 import Takeoff from '../assets/takeoff.png'
+import ConcreteBg from '../assets/concrete-wall.png'
 
 export {
    BarCart,
    CatApi,
    ChelseyParis,
    ChelseyPlane,
+   ConcreteBg,
    cssCreature,
    HelloWorldLogo,
    HeroAirplaneWing,
