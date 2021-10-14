@@ -1,6 +1,6 @@
 // import { useRef } from 'react'
 import { Works } from '../data'
-import FlipCards from '../styles/FlipCards'
+import { FlipCards } from '../core'
 
 const Projects = () => {
    // const ref = useRef()

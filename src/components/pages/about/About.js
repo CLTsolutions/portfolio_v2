@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useRouteMatch } from 'react-router'
-import { ShortBio, LongBio } from '../pages'
+import { ShortBio, LongBio } from '..'
 
 const About = () => {
    const [shortBio, setShortBio] = useState(true)

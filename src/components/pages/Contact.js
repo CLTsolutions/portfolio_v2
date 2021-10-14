@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Form from './Form'
+import { Form } from '../core'
 
 const Contact = () => {
    const [inputs, setInputs] = useState({ name: '', email: '', message: '' })
@@ -25,7 +25,6 @@ const Contact = () => {
    }
 
    const handleChange = e => {
-      e.persist()
       setInputs(prevState => ({
          ...prevState,
          [e.target.id]: e.target.value,
@@ -45,6 +44,7 @@ const Contact = () => {
       let hasErrors = false
       for (let key of Object.keys(inputs)) {
          errors[key] = !validationRules[key](inputs[key])
+         // bitwise or assignment
          hasErrors |= errors[key]
       }
       setFieldErrors(prev => ({ ...prev, ...errors }))
