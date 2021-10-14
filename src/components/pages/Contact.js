@@ -24,13 +24,6 @@ const Contact = () => {
       }
    }
 
-   useEffect(() => {
-      // Only perform interactive validation after submit
-      if (Object.keys(fieldErrors).length > 0) {
-         validate()
-      }
-   }, [inputs])
-
    const handleChange = e => {
       e.persist()
       setInputs(prevState => ({
@@ -46,7 +39,7 @@ const Contact = () => {
       message: val => !!val, // similar to "required"
    }
 
-   //  updating state and returning true is all pass
+   // updating state and returning true if all pass
    const validate = () => {
       let errors = {}
       let hasErrors = false
@@ -61,7 +54,11 @@ const Contact = () => {
    //  display fields errs
    const renderFieldError = field => {
       if (fieldErrors[field]) {
-         return <p className='errorMsg'>Please enter a valid {field}.</p>
+         return (
+            <p className='text-red-900 text-2xl pt-2'>
+               * Please enter a valid {field}.
+            </p>
+         )
       }
    }
 
@@ -71,23 +68,28 @@ const Contact = () => {
          return
       }
       setServerState({ submitting: true })
-      await fetch('https://formspree.io/f/xleakrjb', {
-         method: 'POST',
-         headers: {
-            'Content-Type': 'application/json',
-         },
-         body: JSON.stringify({ data: inputs }),
-      })
-         //   data: inputs
-         .then(res => {
-            res.json()
-            handleServerResponse(true, 'Thanks!')
-            console.log(res)
+      try {
+         const res = await fetch('https://formspree.io/f/xleakrjb', {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ data: inputs }),
          })
-         .catch(data => {
-            handleServerResponse(false, data.response.data.error)
-         })
+         await res.json()
+         handleServerResponse(true, 'Thanks!')
+         console.log(res)
+      } catch (err) {
+         handleServerResponse(false, err.response.data.error)
+      }
    }
+
+   useEffect(() => {
+      // Only perform interactive validation after submit
+      if (Object.keys(fieldErrors).length > 0) {
+         validate()
+      }
+   }, [inputs])
 
    // change form bg color once page styling is finished
    return (
@@ -101,6 +103,7 @@ const Contact = () => {
                inputs={inputs}
                handleOnSubmit={handleOnSubmit}
                handleChange={handleChange}
+               fieldErrors={fieldErrors}
                renderFieldError={renderFieldError}
                serverState={serverState}
             />

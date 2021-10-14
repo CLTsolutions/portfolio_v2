@@ -1,10 +1,18 @@
 const Form = ({
-   handleOnSubmit,
+   fieldErrors,
    handleChange,
+   handleOnSubmit,
    inputs,
    renderFieldError,
    serverState,
 }) => {
+   const input =
+      'w-full text-2xl p-4 rounded-lg outline-none border-2 border-transparent focus:border-rose-300'
+   const errInput =
+      'w-full text-2xl p-4 rounded-lg outline-none border-2 border-red-500 focus:border-rose-300'
+   const successMsg = 'text-3xl text-gray-700'
+   const errorMsg = 'text-3xl text-red-500'
+
    return (
       <>
          <form
@@ -17,9 +25,8 @@ const Form = ({
                <label htmlFor='name'>
                   <input
                      id='name'
-                     required
                      type='text'
-                     className='w-full text-2xl p-4 rounded-lg outline-none border-2 border-transparent focus:border-rose-300'
+                     className={fieldErrors.name ? errInput : input}
                      placeholder='Name'
                      name='name'
                      onChange={handleChange}
@@ -33,7 +40,7 @@ const Form = ({
                   <input
                      id='email'
                      type='email'
-                     className='w-full text-2xl p-4 rounded-lg outline-none border-2 border-transparent focus:border-rose-300'
+                     className={fieldErrors.email ? errInput : input}
                      placeholder='Email'
                      name='email'
                      onChange={handleChange}
@@ -47,7 +54,7 @@ const Form = ({
                   <textarea
                      id='message'
                      type='text'
-                     className='w-full text-2xl p-4 rounded-lg outline-none border-2 border-transparent focus:border-rose-300'
+                     className={fieldErrors.message ? errInput : input}
                      placeholder='Message'
                      name='message'
                      rows='7'
@@ -64,7 +71,7 @@ const Form = ({
                Submit
             </button>
             {serverState.status && (
-               <p className={!serverState.status.ok ? 'errorMsg' : ''}>
+               <p className={!serverState.status.ok ? errorMsg : successMsg}>
                   {serverState.status.msg}
                </p>
             )}
