@@ -1,65 +1,109 @@
+import { useState, useEffect } from 'react'
+import Form from './Form'
+
 const Contact = () => {
+   const [inputs, setInputs] = useState({ name: '', email: '', message: '' })
+   const [fieldErrors, setFieldErrors] = useState({})
+   const [serverState, setServerState] = useState({
+      submitting: false,
+      status: null,
+   })
+
+   const handleServerResponse = (ok, msg) => {
+      setServerState({
+         submitting: false,
+         status: { ok, msg },
+      })
+      if (ok) {
+         setFieldErrors({}) // clear field errs
+         setInputs({
+            name: '',
+            email: '',
+            message: '',
+         })
+      }
+   }
+
+   useEffect(() => {
+      // Only perform interactive validation after submit
+      if (Object.keys(fieldErrors).length > 0) {
+         validate()
+      }
+   }, [inputs])
+
+   const handleChange = e => {
+      e.persist()
+      setInputs(prevState => ({
+         ...prevState,
+         [e.target.id]: e.target.value,
+      }))
+   }
+
+   // validation rules for each input
+   const validationRules = {
+      name: val => !!val, // similar to "required"
+      email: val => val && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val),
+      message: val => !!val, // similar to "required"
+   }
+
+   //  updating state and returning true is all pass
+   const validate = () => {
+      let errors = {}
+      let hasErrors = false
+      for (let key of Object.keys(inputs)) {
+         errors[key] = !validationRules[key](inputs[key])
+         hasErrors |= errors[key]
+      }
+      setFieldErrors(prev => ({ ...prev, ...errors }))
+      return !hasErrors
+   }
+
+   //  display fields errs
+   const renderFieldError = field => {
+      if (fieldErrors[field]) {
+         return <p className='errorMsg'>Please enter a valid {field}.</p>
+      }
+   }
+
+   const handleOnSubmit = async event => {
+      event.preventDefault()
+      if (!validate()) {
+         return
+      }
+      setServerState({ submitting: true })
+      await fetch('https://formspree.io/f/xleakrjb', {
+         method: 'POST',
+         headers: {
+            'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({ data: inputs }),
+      })
+         //   data: inputs
+         .then(res => {
+            res.json()
+            handleServerResponse(true, 'Thanks!')
+            console.log(res)
+         })
+         .catch(data => {
+            handleServerResponse(false, data.response.data.error)
+         })
+   }
+
    // change form bg color once page styling is finished
    return (
       <section className='flex flex-col items-center w-full'>
+         {console.info(inputs)}
          <h1 className='text-transform: capitalize font-shadows-into-light text-8xl mt-8 text-blue-light md:animate-fade-in'>
             Contact Me!
          </h1>
-         <div className='w-11/12 md:w-1/2 lg:w-2/5 2xl:w-1/4 xl:h-1/2 2xl:h-2/5 py-20 px-12 my-10 mx-2 bg-blue rounded-lg shadow-xl'>
-            <form className='space-y-6 2xl:space-y-10'>
-               <div className=''>
-                  {/*'htmlFor links input to label by corresponding id for screen readers */}
-                  <label htmlFor='name'>
-                     <input
-                        id='name'
-                        required
-                        type='text'
-                        className='w-full text-2xl border-2 border-gray-200
-                  p-4 rounded outline-none focus:border-lavender-dark'
-                        placeholder='Name'
-                        name='name'
-                        // onChange={this.handleChange}
-                        // onInput={this.inputToUppercase}
-                     />
-                  </label>
-               </div>
-               <div className=''>
-                  <label htmlFor='email'>
-                     <input
-                        id='email'
-                        required
-                        type='email'
-                        className='w-full text-2xl border-2 border-gray-200
-                        p-4 rounded-sm outline-none focus:border-lavender-dark'
-                        placeholder='Email'
-                        name='email'
-                        // onChange={this.handleChange}
-                        // onInput={this.inputToUppercase}
-                     />
-                  </label>
-               </div>
-               <div className=''>
-                  <label htmlFor='message'>
-                     <textarea
-                        id='message'
-                        type='text'
-                        className='w-full text-2xl border-2 border-gray-200
-                        p-4 rounded outline-none focus:border-lavender-dark'
-                        placeholder='Message'
-                        name='message'
-                        rows='7'
-                        // onChange={this.handleChange}
-                        // onInput={this.inputToUppercase}
-                     />
-                  </label>
-               </div>
-               <button
-                  type='submit'
-                  className='py-3 px-4 bg-lavender-dark hover:bg-lavender active:bg-blue border border-lavender hover:border-transparent active:border-none md:text-2xl text-white uppercase tracking-wider rounded-md transition duration-150 focus:outline-none focus:ring-4 focus:ring-blush-light focus:ring-opacity-50'
-               >
-                  Submit
-               </button>
-            </form>
+         <div className='w-11/12 md:w-1/2 lg:w-2/5 2xl:w-1/4 xl:h-1/2 2xl:h-2/5 py-20 px-12 my-10 mx-2 bg-concrete bg-lavender-dark rounded-lg shadow-xl'>
+            <Form
+               inputs={inputs}
+               handleOnSubmit={handleOnSubmit}
+               handleChange={handleChange}
+               renderFieldError={renderFieldError}
+               serverState={serverState}
+            />
          </div>
       </section>
    )

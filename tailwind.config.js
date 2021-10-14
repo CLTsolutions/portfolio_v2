@@ -11,6 +11,7 @@ module.exports = {
          gray: colors.trueGray,
          red: colors.red,
          rose: colors.rose,
+         purple: colors.purple,
          lavender: {
             light: '#dee2ff',
             DEFAULT: '#CBC0D3',
@@ -32,7 +33,7 @@ module.exports = {
       },
       extend: {
          backgroundImage: {
-            ConcreteBg: "url('../src/assets/concrete-wall.png')",
+            concrete: "url('../src/assets/concrete-wall.png')",
          },
          fontFamily: {
             ephesis: ['Ephesis', 'cursive'],
@@ -91,6 +92,7 @@ module.exports = {
       extend: {
          animation: ['motion-safe', 'motion-reduce'],
          backgroundColor: ['active'],
+         borderColor: ['active'],
          borderStyle: ['hover', 'active'],
          flexGrow: ['hover', 'focus'],
          margin: ['last'],
