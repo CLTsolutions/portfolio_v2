@@ -34,6 +34,7 @@ module.exports = {
       extend: {
          backgroundImage: {
             concrete: "url('../src/assets/concrete-wall.png')",
+            'adventure-map': "url('../src/assets/undraw_adventure_map.svg')",
          },
          fontFamily: {
             ephesis: ['Ephesis', 'cursive'],
@@ -96,6 +97,7 @@ module.exports = {
          borderStyle: ['hover', 'active'],
          flexGrow: ['hover', 'focus'],
          margin: ['last'],
+         space: ['last'],
          textColor: ['odd', 'active'],
       },
    },
