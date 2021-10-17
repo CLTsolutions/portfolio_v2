@@ -29,11 +29,18 @@ const LongBio = () => {
             </a>{' '}
             web development program. I found the six months I spent in the
             program quite fulfilling and exciting. The course took me on a
-            journey from basic HTML/CSS to building full stack PERN applications
-            (check them out in my project section below!). I fell in love with
-            programming, and after I graduated, I jumped at the chance to become
-            a learning assistant with Eleven Fifty so I could give back to the
-            program that brought me so much joy.
+            journey from basic HTML/CSS to building full PERN stack applications
+            (check them out in my{' '}
+            <Link
+               to='/projects'
+               className='text-blue focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'
+            >
+               project
+            </Link>{' '}
+            section!). I fell in love with programming, and after I graduated, I
+            jumped at the chance to become a learning assistant with Eleven
+            Fifty so I could give back to the program that brought me so much
+            joy.
             <br />
             <br />I cannot wait to see what this next adventure brings! Find out
             more on
@@ -45,7 +52,7 @@ const LongBio = () => {
                {' '}
                LinkedIn
             </a>
-            , and check out my{' '}
+            , and make sure to check out my{' '}
             <Link
                to='/skills'
                className='text-blue focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50'

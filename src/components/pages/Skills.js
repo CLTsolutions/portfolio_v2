@@ -1,4 +1,5 @@
 import { SkillsList } from '../data'
+import { Typewriter } from '../core'
 
 const Skills = () => {
    const skillsMapper = () => {
@@ -14,8 +15,8 @@ const Skills = () => {
 
    return (
       <section className='flex flex-col'>
-         <h1 className='text-transform: capitalize font-lucky-typewriter text-8xl text-center my-5 text-blue md:animate-fade-in'>
-            skills
+         <h1 className='text-transform: capitalize font-lucky-typewriter text-7xl 2xl:text-8xl text-center my-5 text-blue'>
+            <Typewriter textToType={'skills'} />
          </h1>
          <ul className='flex flex-col justify-center space-y-5 last:mb-5'>
             {skillsMapper()}
