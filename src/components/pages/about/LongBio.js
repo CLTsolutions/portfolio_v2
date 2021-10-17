@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ChelseyParis } from '../../../assets'
+import { ChelseyParis } from '../../../assets/images'
 
 const LongBio = () => {
    return (

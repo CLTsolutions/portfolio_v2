@@ -14,7 +14,7 @@ const Skills = () => {
 
    return (
       <section className='flex flex-col'>
-         <h1 className='text-transform: capitalize font-shadows-into-light text-8xl text-center my-5 text-blue md:animate-fade-in'>
+         <h1 className='text-transform: capitalize font-lucky-typewriter text-8xl text-center my-5 text-blue md:animate-fade-in'>
             skills
          </h1>
          <ul className='flex flex-col justify-center space-y-5 last:mb-5'>

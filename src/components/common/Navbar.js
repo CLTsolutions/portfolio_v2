@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useLocation } from 'react-router'
 import { Link, NavLink } from 'react-router-dom'
 import { AiOutlineBars, AiOutlineClose } from 'react-icons/ai'
-import { Logo } from '../../assets/'
+import { Logo } from '../../assets/images'
 import { NavbarLinks, Colors } from '../data'
 // import '../styles/Navbar.css'
 

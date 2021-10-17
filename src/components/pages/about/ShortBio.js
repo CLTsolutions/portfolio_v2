@@ -1,4 +1,4 @@
-import { ChelseyPlane } from '../../../assets'
+import { ChelseyPlane } from '../../../assets/images'
 
 const ShortBio = () => {
    return (

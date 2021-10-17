@@ -10,7 +10,7 @@ const About = () => {
 
    return (
       <section className='flex flex-col justify-center items-center'>
-         <h1 className='text-transform: capitalize font-shadows-into-light text-8xl text-center mt-8 text-blush-dark md:animate-fade-in'>
+         <h1 className='text-transform: capitalize font-lucky-typewriter text-8xl text-center mt-8 text-blush-dark md:animate-fade-in'>
             about me
          </h1>
          <ul className='space-x-5 pt-16'>

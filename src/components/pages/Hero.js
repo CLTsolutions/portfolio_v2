@@ -1,4 +1,4 @@
-import { HelloWorldLogo } from '../../assets'
+import { HelloWorldLogo } from '../../assets/images'
 import '../styles/Hero.css'
 import { FiChevronDown } from 'react-icons/fi'
 

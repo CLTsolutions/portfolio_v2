@@ -33,14 +33,26 @@ module.exports = {
       },
       extend: {
          backgroundImage: {
-            concrete: "url('../src/assets/concrete-wall.png')",
-            'adventure-map': "url('../src/assets/undraw_adventure_map.svg')",
+            concrete: "url('../src/assets/images/concrete-wall.png')",
+            'adventure-map':
+               "url('../src/assets/images/undraw_adventure_map.svg')",
+            'airplane-wing': "url('../src/assets/images/airplaneWing.jpg')",
          },
          fontFamily: {
             ephesis: ['Ephesis', 'cursive'],
             'give-you-glory': ['"Give You Glory"', 'cursive'],
-            'shadows-into-light': ['"Shadows Into Light"', 'cursive'],
             raleway: ['Raleway', 'sans-serif'],
+            'shadows-into-light': ['"Shadows Into Light"', 'cursive'],
+            'lucky-typewriter': ['"Lucky Typewriter"'],
+            southgirl: ['Southgirl'],
+         },
+         fontSize: {
+            '10xl': '10rem',
+            '11xl': '12rem',
+            '12xl': '14rem',
+            '13xl': '16rem',
+            '14xl': '18rem',
+            '15xl': '20rem',
          },
          keyframes: {
             'fade-in': {
@@ -58,6 +70,11 @@ module.exports = {
                '50%': { transform: 'translateY(-1rem)' },
                '100%': { transform: 'translateY(0)', opacity: '1' },
             },
+            'slide-up': {
+               '0%': { transform: 'translateY(100%)', opacity: '0' },
+               '50%': { opacity: '0' },
+               '100%': { transform: 'translateY(0%)', opacity: '1' },
+            },
             wiggle: {
                '0%, 100%': { transform: 'rotate(-3deg)' },
                '50%': { transform: 'rotate(3deg)' },
@@ -67,6 +84,7 @@ module.exports = {
             'fade-in-larger': 'fade-in 1s ease-in',
             'fade-in': 'fade-in 1s ease-in',
             'fade-up': 'fade-up .5s ease-in',
+            'slide-up': 'slide-up .5s ease-out',
             wiggle: 'wiggle 1s ease-in-out infinite',
          },
          height: {

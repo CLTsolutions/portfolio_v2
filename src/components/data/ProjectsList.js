@@ -5,7 +5,7 @@ import {
    LoremPicsum,
    KastThumb,
    Takeoff,
-} from '../../assets'
+} from '../../assets/images'
 
 const projects = 'projects'
 
