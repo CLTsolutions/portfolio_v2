@@ -12,7 +12,7 @@ const About = () => {
       'bg-lavender-dark active:bg-lavender text-white active:text-lavender-dark font-semibold transition ease-out duration-300 py-2 px-4 border border-lavender-dark rounded text-2xl focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50 shadow-md'
 
    return (
-      <section className='flex flex-col justify-center items-center'>
+      <section className='bg-concrete flex flex-col justify-center items-center'>
          <h1 className='text-transform: capitalize font-lucky-typewriter text-7xl 2xl:text-8xl text-center mt-8 text-blush-dark'>
             <Typewriter textToType={'about me'} />
          </h1>
