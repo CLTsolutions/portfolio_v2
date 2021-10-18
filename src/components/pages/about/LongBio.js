@@ -3,13 +3,13 @@ import { ChelseyParis } from '../../../assets/images'
 
 const LongBio = () => {
    return (
-      <article className='md:flex md:justify-center md:items-center my-4'>
+      <article className='flex flex-col lg:flex-row md:justify-center md:items-center my-10 lg:my-4'>
          <img
-            className='md:w-1/4 md:h-1/4 rounded-3xl p-5 md:hidden'
+            className='mx-5 md:w-1/2 md:h-1/2 lg:w-1/4 lg:h-1/4 p-5 lg:hidden rounded-xl shadow-lg border-double border-4 2xl:border-8 border-gray-400'
             src={ChelseyParis}
             alt='About Me Chelsey in Paris'
          />
-         <p className='md:w-1/2 md:px-20 text-3xl p-5 text-justify leading-relaxed'>
+         <p className='p-7 2xl:px-40 md:w-3/5 md:px-20 text-3xl 2xl:text-5xl text-justify leading-relaxed 2xl:leading-loose'>
             Hey there! I'm Chelsey! For the past decade, I have been a flight
             attendant. It has been a unique and rewarding experience as I have
             been able to travel all over the world, live in several different
@@ -61,7 +61,7 @@ const LongBio = () => {
             </Link>
          </p>
          <img
-            className='md:w-1/4 md:h-1/4 rounded-3xl p-5 hidden md:block'
+            className='md:w-1/4 md:h-1/4 p-5 hidden lg:block rounded-xl shadow-lg border-double border-4 2xl:border-8 border-gray-400'
             src={ChelseyParis}
             alt='About Me Chelsey in Paris'
          />

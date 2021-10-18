@@ -6,7 +6,7 @@ import { Typewriter } from '../core'
 const Projects = () => {
    // const ref = useRef()
    const buttonStyle =
-      'bg-transparent hover:bg-lavender-dark text-blue text-font-semibold hover:text-white transition ease-out duration-300 py-2 px-4 border border-blue hover:border-transparent rounded text-2xl focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50  shadow-md'
+      'bg-transparent hover:bg-lavender-dark text-blue text-font-semibold hover:text-white transition ease-out duration-300 py-2 px-4 border border-blue hover:border-transparent rounded text-2xl focus:outline-none focus:ring-2 focus:ring-lavender-dark focus:ring-opacity-50 shadow-md'
 
    const cardsMapper = () => {
       return Works.map(work => (

@@ -47,7 +47,7 @@ const FlipCards = ({ skillMapper, buttonStyle, work }) => {
                   </a>
                </div>
                <div className='flex justify-between items-center'>
-                  <h3 className='font-southgirl text-4xl md:text-10xl text-gray-800'>
+                  <h3 className='font-shadows-into-light md:font-southgirl font-semibold md:font-normal text-4xl md:text-10xl text-gray-800'>
                      Tech Stack:
                   </h3>
                   <ul className='flex flex-wrap justify-center space-x-3'>
