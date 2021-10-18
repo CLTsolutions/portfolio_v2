@@ -5,8 +5,9 @@ const Typewriter = ({ textToType, delay, loop }) => {
    const [currentIndex, setCurrentIndex] = useState(0)
 
    useEffect(() => {
+      let timeout
       if (currentIndex < textToType.length) {
-         setTimeout(() => {
+         timeout = setTimeout(() => {
             setText(text + textToType[currentIndex])
             setCurrentIndex(currentIndex + 1)
          }, 200)
@@ -14,6 +15,10 @@ const Typewriter = ({ textToType, delay, loop }) => {
          // reset the text and the index
          setText('')
          setCurrentIndex(0)
+      }
+      return () => {
+         console.info('clear timeout')
+         timeout && clearTimeout(timeout)
       }
    }, [currentIndex])
 

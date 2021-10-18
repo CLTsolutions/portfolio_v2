@@ -75,6 +75,10 @@ module.exports = {
                '50%': { opacity: '0' },
                '100%': { transform: 'translateY(0%)', opacity: '1' },
             },
+            'btn-slide-up': {
+               '0%': { transform: 'translateY(100%)', opacity: '0' },
+               '100%': { transform: 'translateY(0%)', opacity: '1' },
+            },
             wiggle: {
                '0%, 100%': { transform: 'rotate(-3deg)' },
                '50%': { transform: 'rotate(3deg)' },
@@ -82,9 +86,11 @@ module.exports = {
          },
          animation: {
             'fade-in-larger': 'fade-in 1s ease-in',
-            'fade-in': 'fade-in 1s ease-in',
+            'fade-in': 'fade-in .5s ease-in',
+            'hero-fade-in': 'fade-in 2s ease-in',
             'fade-up': 'fade-up .5s ease-in',
             'slide-up': 'slide-up .5s ease-out',
+            'btn-slide-up': 'btn-slide-up .5s ease-out both',
             wiggle: 'wiggle 1s ease-in-out infinite',
          },
          height: {

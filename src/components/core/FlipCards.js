@@ -35,6 +35,7 @@ const FlipCards = ({ skillMapper, buttonStyle, work }) => {
                      href={work.deployedUrl}
                      target='_blank'
                      className='focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50'
+                     rel='noreferrer'
                   >
                      <button className={buttonStyle}>Go To Project</button>
                   </a>
@@ -42,6 +43,7 @@ const FlipCards = ({ skillMapper, buttonStyle, work }) => {
                      href={work.github}
                      target='_blank'
                      className='focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50'
+                     rel='noreferrer'
                   >
                      <button className={buttonStyle}>View Raw Code</button>
                   </a>
