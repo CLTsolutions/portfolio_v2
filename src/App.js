@@ -27,7 +27,6 @@ function App() {
             <Route path='/resume' component={Resume} />
             <Route path='/projects' component={Projects} />
             <Route path='/contact' component={Contact} />
-            <Route path='/home/about' component={About} />
             <Route component={Error} />
          </Switch>
          <Footer />
