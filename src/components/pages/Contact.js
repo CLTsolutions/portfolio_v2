@@ -97,7 +97,7 @@ const Contact = () => {
       <section className='bg-airplane-wing bg-cover bg-no-repeat object-cover h-full flex flex-col items-center w-full'>
          {console.info(inputs)}
          <h1 className='text-transform: capitalize font-lucky-typewriter text-7xl 2xl:text-8xl mt-8 text-blue-dark md:animate-fade-in'>
-            <Typewriter textToType={'contact me!'} />
+            <Typewriter textToType={`let's connect!`} />
          </h1>
          <div className='w-11/12 md:w-1/2 lg:w-2/5 2xl:w-1/4 xl:h-1/2 2xl:h-2/5 py-20 px-12 my-10 mx-2 bg-white bg-opacity-60 rounded-lg shadow-xl'>
             <Form

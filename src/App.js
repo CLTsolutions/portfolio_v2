@@ -11,6 +11,7 @@ import {
 } from './components/pages'
 import { Navbar, Footer } from './components/common'
 
+// not fat arrow because not using hooks in app component
 function App() {
    return (
       <div className='App'>

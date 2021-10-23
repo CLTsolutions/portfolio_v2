@@ -38,9 +38,9 @@ const LongBio = () => {
                project
             </Link>{' '}
             section!). I fell in love with programming, and after I graduated, I
-            jumped at the chance to become a learning assistant with Eleven
-            Fifty so I could give back to the program that brought me so much
-            joy.
+            jumped at the chance to become a web development training assistant
+            with Eleven Fifty so I could give back to the program that brought
+            me so much joy.
             <br />
             <br />I cannot wait to see what this next adventure brings! Find out
             more on
