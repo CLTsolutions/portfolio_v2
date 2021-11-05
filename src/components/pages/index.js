@@ -1,4 +1,5 @@
 import About from './about/About'
+import AboutHero from './about/HeroAbout'
 import Contact from './Contact'
 import Error from './Error'
 import Hero from './Hero'
@@ -10,6 +11,7 @@ import Skills from './Skills'
 
 export {
    About,
+   AboutHero,
    Contact,
    Error,
    Hero,

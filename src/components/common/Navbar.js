@@ -14,7 +14,7 @@ const Navbar = () => {
    const homeNavbar =
       'absolute md:flex md:items-center md:justify-between w-full bg-opacity-75'
    const navbar =
-      'md:flex md:items-center md:justify-between w-full bg-opacity-75 border-b-2'
+      'md:flex md:items-center md:justify-between w-full bg-white border-b-2'
    const homeLink =
       'hover:bg-blue-dark hover:bg-opacity-75 hover:text-white rounded transition duration-150 px-2 py-2 focus:outline-none focus:ring-2 focus:ring-blush-light focus:ring-opacity-50 uppercase tracking-wider text-gray-700 text-2xl'
    const navLink =
@@ -63,7 +63,7 @@ const Navbar = () => {
    const menuOpen = () => {
       return (
          isOpen && (
-            <ul className='px-4 pt-2 pb-4 bg-blush rounded-lg ease-in-out'>
+            <ul className='px-4 pt-2 pb-4 bg-blush rounded-lg'>
                {navbarMapper()}
             </ul>
          )

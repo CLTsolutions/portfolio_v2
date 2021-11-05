@@ -29,7 +29,7 @@ const Projects = () => {
 
    return (
       <main>
-         <h1 className='text-transform: capitalize font-lucky-typewriter text-7xl 2xl:text-8xl text-center mt-8 text-blue-light md:animate-fade-in'>
+         <h1 className='h-20 capitalize font-lucky-typewriter text-7xl 2xl:text-8xl text-center mt-8 text-blue-light md:animate-fade-in'>
             <Typewriter textToType={'projects'} />
          </h1>
          <div className='flex flex-wrap justify-center w-full md:p-10 xl:grid xl:grid-cols-3 xl:grid-rows-2 xl:justify-items-center xl:gap-y-16 animate-slide-up'>

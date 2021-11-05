@@ -1,8 +1,12 @@
 import { HelloWorldLogo } from '../../assets/images'
 import '../styles/Hero.css'
 import { FiChevronDown } from 'react-icons/fi'
+import { Route, Switch, useRouteMatch } from 'react-router-dom'
+import { AboutHero } from '.'
 
 const Hero = () => {
+   let { path } = useRouteMatch()
+
    const buttonTest = () => {
       console.log('button is firing')
    }
@@ -22,6 +26,12 @@ const Hero = () => {
                About me <FiChevronDown className='ml-2' />
             </button>
          </div>
+
+         <Switch>
+            <Route exact path={`${path}/about`}>
+               <AboutHero />
+            </Route>
+         </Switch>
       </section>
    )
 }

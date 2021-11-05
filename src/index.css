@@ -23,6 +23,9 @@
    .animation-delay-700 {
       animation-delay: 0.7s;
    }
+   .text-shadow {
+      text-shadow: 0.5px 0.5px 0.5px gray;
+   }
 }
 
 *,

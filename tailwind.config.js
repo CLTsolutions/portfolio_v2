@@ -37,6 +37,7 @@ module.exports = {
             'adventure-map':
                "url('../src/assets/images/undraw_adventure_map.svg')",
             'airplane-wing': "url('../src/assets/images/airplaneWing.jpg')",
+            'cape-town-beach': 'url(../src/assets/images/capeTownBeach.jpg)',
          },
          fontFamily: {
             ephesis: ['Ephesis', 'cursive'],

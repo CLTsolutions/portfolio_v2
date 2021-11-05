@@ -20,8 +20,6 @@ function App() {
             <Route exact path='/'>
                <Redirect to='/home' />
             </Route>
-            {/* <Route path='/home/#about' component={About} /> */}
-            <Route path='/home/about' component={About} />
             <Route path='/home' component={Hero} />
             <Route path='/about' component={About} />
             <Route path='/skills' component={Skills} />
