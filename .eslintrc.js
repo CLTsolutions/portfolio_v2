@@ -25,8 +25,13 @@ module.exports = {
       // { blankLine: 'always', prev: '*', next: ['const', 'let', 'var'] },
       { blankLine: 'always', prev: ['const', 'let', 'var'], next: 'block' },
       { blankLine: 'always', prev: '*', next: 'return' },
-      { blankLine: 'always', prev: '*', next: ['class', 'if', 'while', 'switch', 'try'] },
+      { blankLine: 'always', prev: ['class', 'if', 'while', 'switch', 'try'], next: '*' },
+      // { blankLine: 'always', prev: '*', next: ['class', 'if', 'while', 'switch', 'try'] },
     ],
+    'react/function-component-definition': [2, {
+      namedComponents: 'arrow-function',
+      unNamedComponents: 'arrow-function',
+    }],
     'react/jsx-curly-spacing': [1, {
       when: 'always',
       spacing: {
