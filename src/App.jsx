@@ -12,7 +12,6 @@ import {
 import { About } from './components/pages/about';
 import { Navbar, Footer } from './components/common';
 
-// not fat arrow because not using hooks in app component
 const App = () => {
   const location = useLocation();
   const isNotHomePath = location.pathname !== '/home';

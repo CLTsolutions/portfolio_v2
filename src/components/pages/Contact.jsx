@@ -44,10 +44,9 @@ const Contact = () => {
     const errors = {};
     let hasErrors = false;
 
-    Object.keys(inputs).forEach((input) => {
-      errors[input] = !validationRules[input](inputs[input]);
-      // bitwise or assignment
-      hasErrors = hasErrors || errors[input];
+    Object.keys(inputs).forEach((k) => {
+      errors[k] = !validationRules[k](inputs[k]);
+      hasErrors = hasErrors || errors[k];
     });
     setFieldErrors((prev) => ({ ...prev, ...errors }));
 
